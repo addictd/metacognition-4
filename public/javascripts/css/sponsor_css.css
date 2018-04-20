@@ -1,0 +1,35 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+@font-face {
+		    font-family: anson;
+		    src: url("Font/Anson-Regular.otf");
+		}
+
+
+*{
+	font-family: anson;
+}
+
+#sponsor_main1{
+	height:40vh; 
+	background-color:#0F1D42; 
+	color:white; 
+	padding-top:70px;
+	font-family: anson;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#sponsor_main_img{
+	margin:0 auto;
+	position:relative;
+	top:-8vh;
+}
+#sponsor_detail_img{
+	
+}

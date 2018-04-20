@@ -1,0 +1,28 @@
+nav.navbar.navbar-default.navbar-static-top(style='')
+  .container-fluid
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    // Collect the nav links, forms, and other content for toggling
+
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse(style='')
+      ul.nav.navbar-nav(style="display: inline-block; float: none;background-color: ;")
+        li(style='font-size:18px;')
+          a(href='/') Home
+        li(style='font-size: 18px;')
+          a(href='/events') Events
+        li(style='font-size: 18px;')
+          a(href='/team') Team
+        li#navbar_image
+          a(href='/')
+            img#logo-navbar-middle(src='images/meta_logo_small.png', width='150', alt='Logo Thing main logo')
+        li(style='font-size: 18px;')
+          a(href='/sponsors') Sponsors
+        li(style='font-size: 18px;')
+          a(href='/gallery') Gallery
+        li(style='font-size: 18px;')
+          a(href='/alumni') Alumni

@@ -1,0 +1,113 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Bootstrap image hover effects')
+    title Metacognition' 18
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+    // Bootstrap Core CSS
+    link(href='javascripts/Bootsrap/css/bootstrap.css', rel='stylesheet')
+    // CCS for the effects
+    link(href='javascripts/css/effects.min.css', rel='stylesheet')
+    // Font Icons
+    link(rel='stylesheet', href='javascripts/css/font-awesome.min.css')
+    // Custom Fonts
+    link(href='https://fonts.googleapis.com/css?family=Bree+Serif|Sedgwick+Ave+Display', rel='stylesheet')
+    link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    link(rel='stylesheet', type='text/css', href='javascripts/css/sponsor_css.css')
+
+    link(href='javascripts/css/universal_style.css', rel='stylesheet')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js')
+    script(src='javascripts/universal_script.js')
+    script(type='text/javascript').
+      $(document).ready(function(){
+      var btn = document.getElementsByClassName('sponsor_logo');
+      var art = document.getElementsByClassName('sponsor-overview');
+      try{
+      console.log(btn);
+      }catch(err){
+      alert("hello");
+      }
+      Array.from(art).forEach(function(element){
+      element.style.display = 'none';
+      })
+      $(btn).click(function(){
+      var index = $(this).index();
+      console.log(index);
+      Array.from(art).forEach(function(element){
+      element.style.display = 'none';
+      })
+      art[index].style.display="block";
+      })
+      });
+    style.
+      .col-md-2{
+      overflow: hidden;
+      min-height:20vh;
+      padding:8px;
+      outline:2px solid #0F1D42;
+      outline-offset:-10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .col-md-2:nth-child(odd){
+      background-color: ;
+      position:relative;
+      top:30px;
+      }
+      .col-md-2 img{
+      width:100%;
+      }
+      #header_sponsor{
+      font-size: 200px;
+      }
+      #sponsor_main2 .container-fluid{
+      padding:0 100px;
+      }
+      .navbar{
+      background-color: rgba(243,243,243,.5);
+      }
+      @media only screen and (max-width:800px) {
+      #header_sponsor{
+      font-size: 140px;
+      }
+      #sponsor_main2 .container-fluid{
+      padding:0 100px;
+      }
+      }
+      @media only screen and (max-width:450px) {
+      .navbar{
+      background-color: rgba(243,243,243,1);
+      }
+      #header_sponsor{
+      font-size: 60px;
+      }
+      #sponsor_main2 .container-fluid{
+      padding:0 10px;
+      }
+      .col-md-2:nth-child(odd){
+      position:relative;
+      top:70px;
+      }
+      }
+  body
+    .se-pre-con
+    // Page Content
+    .container-fluid(style=' background: url(images/bg4.jpg) no-repeat center center fixed;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;')
+      .row
+        include partials/navbar.jade
+
+      .row.mid(style='background: url(images/bg6.jpg) no-repeat center center fixed;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;')
+        h1#header_sponsor(style='') SPONSORS
+      #sponsor_main2.row(style='')
+        include partials/sponsor_total.jade
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js')
+    script(src='javascripts/Bootsrap/jquery.min.js')
+    script(src='javascripts/Bootsrap/js/bootstrap.min.js')
+    // Bootstrap & jQuery
+    script(src='javascripts/js/production.min.js')

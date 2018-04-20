@@ -1,0 +1,158 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Bootstrap image hover effects')
+    title Metacognition' 18
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+    // Bootstrap Core CSS
+    link(href='javascripts/Bootsrap/css/bootstrap.css', rel='stylesheet')
+    // CCS for the effects
+    link(href='javascripts/css/effects.min.css', rel='stylesheet')
+    // Font Icons
+    link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    link(rel='stylesheet', href='javascripts/Team/css/style.css')
+    link(href='https://fonts.googleapis.com/css?family=Architects+Daughter', rel='stylesheet')
+
+    link(href='javascripts/css/universal_style.css', rel='stylesheet')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js')
+    script(src='javascripts/universal_script.js')
+
+    script(type='text/javascript').
+      $(document).ready(function(){
+      var btn1 = document.getElementsByClassName('team_indivisual1');
+      var detail1 = document.getElementsByClassName('team_indivisual_details1');
+      var btn2 = document.getElementsByClassName('team_indivisual2');
+      var detail2 = document.getElementsByClassName('team_indivisual_details2');
+      var btn3 = document.getElementsByClassName('team_indivisual3');
+      var detail3 = document.getElementsByClassName('team_indivisual_details3');
+      var index1;
+      var index2;
+      var index3;
+      $(btn1).hover(function(){
+      index1 = $(this).index();
+      switch(index1){
+      case 0: $(detail1[index1]).html("Vinnie Mathur"); break;
+      case 1: $(detail1[index1]).html("Rajeev Sharma"); break;
+      case 2: $(detail1[index1]).html("Ria Singh"); break;
+      case 3: $(detail1[index1]).html("Rajat"); break;
+      default: ;
+      }
+      }, function(){
+      switch(index1){
+      case 0: $(detail1[index1]).html("Dean of Student Affairs"); break;
+      case 1: $(detail1[index1]).html("Convener<br><br>"); break;
+      case 2: $(detail1[index1]).html("Head"); break;
+      case 3: $(detail1[index1]).html("Head"); break;
+      default: ;
+      }
+      })
+      $(btn3).hover(function(){
+      index3 = $(this).index();
+      switch(index3){
+      case 0: $(detail3[index3]).html("Ria Singh"); break;
+      case 1: $(detail3[index3]).html("Rajat Kumar"); break;
+      case 2: $(detail3[index3]).html("Pranshu Shukla"); break;
+      default: ;
+      }
+      }, function(){
+      switch(index3){
+      case 0: $(detail3[index3]).html("Head"); break;
+      case 1: $(detail3[index3]).html("Head"); break;
+      case 2: $(detail3[index3]).html("Marketing Head"); break;
+      default: ;
+      }
+      })
+      $(btn2).hover(function(){
+      index2= $(this).index();
+      switch(index2){
+      case 0: $(detail2[index2]).html("Shlok & Chhavi"); break;
+      case 1: $(detail2[index2]).html("Devanshi & Aditi"); break;
+      case 2: $(detail2[index2]).html("Pushpit"); break;
+      case 3: $(detail2[index2]).html("Kshitij, Deep & Shubham"); break;
+      default: ;
+      }
+      }, function(){
+      switch(index2){
+      case 0: $(detail2[index2]).html("Event-Support"); break;
+      case 1: $(detail2[index2]).html("Editor"); break;
+      case 2: $(detail2[index2]).html("Hospitality"); break;
+      case 3: $(detail2[index2]).html("Developers"); break;
+      default: ;
+      }
+      })
+      });
+    style.
+      
+      h1{
+      color:#0F1D42;
+      }
+      .navbar{
+      background-color: rgba(243,243,243,.5);
+      }
+      .section1{
+      padding:50px 25% 0 25%;
+      }
+      #team_promo{
+      font-size:50px;
+      line-height: 50px;
+      text-align: center;
+      }
+      .team_member_img_div{
+        max-width: 400px;
+        background-color: rgb(93%, 93%, 93%);
+      }
+      .team_leader_name{
+        background-color: rgb(11%, 9%, 27%);
+        font-size: 40px;
+      }
+      .team_leader_designation{
+        font-size: 20px;
+        background-color: ;
+      }
+      @media only screen and (max-width:450px) {
+      .navbar{
+      background-color: rgba(243,243,243,1);
+      }
+      #section1{
+      padding:50px 0;
+      }
+      }
+
+
+  body(style="background :url('images/b10.jpg') no-repeat center center  fixed; background-size:cover;")
+    .se-pre-con
+    // Page Content
+    .container-fluid
+      .row
+        include partials/navbar.jade
+
+      .row(style='height: 100%; ')
+        .container-fluid(style='height:25 ;  padding-top: ;')
+          .row#team_head_max_height(style='background-color: ')
+            .col-md-4.mid#team_head_set_height(style='background-color:#0F1D42;')
+              h1(style='font-size:125px; color:white; ') TEAM
+            .col-md-8(style='background-color: #B90007;')
+              div(style='width:80%; background-color: ; margin:20px auto;')
+                h2(style="font-family: 'Architects Daughter', cursive;")
+                  i
+                    | "Individuals can and do make a difference, but it takes a team to really mess things up!"
+          
+        .container#team_member_div(style='background-color: ;')
+          include partials/team_member.jade
+
+        script.
+            $(document).ready(function(){
+            var x1= $("#team_head_max_height").css("height")
+            console.log(x1)
+            $("#team_head_set_height").css("height", x1)
+            });
+
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js')
+      script(src='javascripts/Bootsrap/jquery.min.js')
+      script(src='javascripts/Bootsrap/js/bootstrap.min.js')
+      // Bootstrap & jQuery
+      script(src='javascripts/js/production.min.js')

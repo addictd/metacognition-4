@@ -1,0 +1,355 @@
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Bootstrap image hover effects')
+    title Metacognition' 18
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+    
+    
+    link(href='javascripts/Bootsrap/css/bootstrap.css', rel='stylesheet')
+    link(href='javascripts/css/effects.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='javascripts/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Bree+Serif|Sedgwick+Ave+Display', rel='stylesheet')
+    link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    link(rel='stylesheet', type='text/css', href='javascripts/eventdc.css')
+
+
+    link(href='javascripts/css/universal_style.css', rel='stylesheet')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js')
+    script(src='javascripts/universal_script.js')
+
+    style.
+      body
+      {
+      background-color:rgba(6,0,56,1);
+      font-family:'Sedgwick Ave Display';
+      text-transform: none;
+      }
+      .border{
+        border: 1px solid white;
+      }
+      .navbar{
+      background-color: rgba(243,243,243,.5);
+      }
+      #gallery_img{
+      padding:50px 10%;
+      }
+      .modal_heading{
+      color: white;
+      }
+      .modal h2{
+        font-size: 25px;
+        color: white;
+      }
+      .modal h3{
+        font-size: 20px;
+        color: white;
+      }
+      @media only screen and (max-width:450px) {
+      .navbar{
+      background-color: rgba(243,243,243,1);
+      }
+      #gallery_img{
+      padding:50px 0;
+      }
+      }
+  body(style="background: url(images/bg5.jpg) no-repeat center center fixed;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;")
+    
+    .se-pre-con
+    // Page Content
+    .container-fluid(style='padding: ; ')
+      .row
+        include partials/navbar.jade
+
+    .container
+      .row.equal_height_div(style='padding-top: ;')
+
+        .col-md-4(style='background-color:;')
+          .row#event_header_div
+            .col-md-12
+              center
+                h1(style='font-size: ;') Metacognition  
+                h1(style='font-size: 100px;') Events
+        .col-md-8
+              .row
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#all_event(onClick='display_all()', style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/all.png')
+                  p(align='center') All Events
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#robotics(onClick='filter("robotics")', style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/robotics.png')
+                  p(align='center') Robotics
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#gaming(onClick='filter("gaming")',style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/gaming.png')
+                  p(align='center') Gaming
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#electronics(onClick='filter("electronics")',style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/electronics.png')
+                  p(align='center') Electronics
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#brain_storming(onClick='filter("brain_storming")',style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/brainstorming.png')
+                  p(align='center') Brain Storming
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#coding(onClick='filter("coding")',style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/coding.png')
+                  p(align='center') Coding
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#mechanical(onClick='filter("mechanical")',style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/mechanical.png')
+                  p(align='center') Mechanical
+                .col-md-4.col-sm-4.col-lg-3.col-xs-6.event_sort_header#fun(onClick='filter("fun")',style='cursor: pointer')
+                  center 
+                    img.img-responsive(src='images/events_header/fun.png')
+                  p(align='center') Fun Events
+
+      .row(style="padding-top: 50px;") 
+        h4(style="cursor: pointer;") 
+          a(href="https://docs.google.com/forms/d/e/1FAIpQLSdUDjFa-Ta7VveQY4IJVNnJhwq67D43THqh9-mLOicusUx-sw/viewform", target="_blank")
+            center(style="background-color: rgba(58%, 64%, 71%,.5); padding: 20px 0; color:white; text-decoration:none; ")  Click here to register for the event.
+    .container(style='padding-top: 50px;')
+      .row
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/crossbits.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Crossbits
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal1')
+                h2 Technical Crossword
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/quest.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Quest
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal2')
+                h2 IT Quest (Quizzing)
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/point_blank.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Point Blank
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal3')
+                h2 Group Discussion
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/pandora_box.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Pandora Box
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal4')
+                h2 
+        //.clearfix.visible-lg-block
+         //- 
+          .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.gaming(style=' padding:10px')
+            .hover.ehover42.mid
+              img.img-responsive(src='images/8-ball pool.png', alt='')
+              .overlay(style="background-color: transparent;")
+                h2(style='font-family:anson;') 8 Ball-pool
+                button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal5')
+                  h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.coding(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive( src='images/blind_coding.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Blind Coding
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal6')
+                h2 C/C++ required
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/building_blocks.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Building Blocks
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal7')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/coin_to_destination.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Coin to destination
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal8')
+                h2 
+        //.clearfix.visible-lg-block
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.robotics(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/drone.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Drone
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal9')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/e-surfing.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') E-Surfing
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal10')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.electronics(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/line_follower.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Line Follower
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal11')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.gaming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/minimiletia.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Mini Militia
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal12')
+                h2 
+        //.clearfix.visible-lg-block
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.robotics(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/roborace.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Roborace
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal13')
+                | Show more
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.robotics(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive( src='images/robosoccer.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Robosoccer
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal14')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.robotics(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/roboassasin.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Robowar
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal15')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.coding(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/sherlock.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Sherlock And The Code
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal16')
+                h2
+        //.clearfix.visible-lg-block
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/stick_building.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Stick Build
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal17')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/sudoku.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') SUDOKU
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal18')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/wire_loop.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Wire Loop Game
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal19')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.brain_storming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/quiz_me.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Quiz me
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal20')
+                h2
+        //.clearfix.visible-lg-block
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/glass_pyramid.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Glass Pyramid
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal21')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.gaming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/cs.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Counter Strike
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal22')
+                h2 
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.gaming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/fifa.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') FIFA
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal23')
+                h2 
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.gaming(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/nfs.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Need For Speed
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal24')
+                h2 Most Wanted
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.mechanical(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/blue.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') The Tech Designers
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal25')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/green.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Funk From Junk
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal26')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/purple.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Fun With You
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal27')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.coding(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/black.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Code.j
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal28')
+                h2
+        //.clearfix.visible-lg-block
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/red.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Rubiks cube
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal29')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/red1.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Clash Of Clans
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal30')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/sky-blue.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Treasure Hunt
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal31')
+                h2
+        .col-lg-3.col-md-4.col-sm-6.col-xs-12.event.fun(style='padding:10px')
+          .hover.ehover42.mid
+            img.img-responsive(src='images/yellow.png', alt='')
+            .overlay(style="background-color: transparent;")
+              h2(style='font-family:anson;') Infotra 2k18 
+              button.info(style='font-family:anson;', data-toggle='modal', data-target='#modal32')
+                h2
+
+    include partials/events_page_modals.jade
+
+    script(type='text/javascript', src='javascripts/event_script.js')
+    // Bootstrap & jQuery
+    script(src='javascripts/js/production.min.js')

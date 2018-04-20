@@ -1,0 +1,120 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Bootstrap image hover effects')
+    title Metacognition' 18
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+    // Bootstrap Core CSS
+    link(href='javascripts/Bootsrap/css/bootstrap.css', rel='stylesheet')
+    // CCS for the effects
+    link(href='javascripts/css/effects.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+
+    link(href='javascripts/css/universal_style.css', rel='stylesheet')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js')
+    script(src='javascripts/universal_script.js')
+
+    script(type='text/javascript').
+      $(document).ready(function(){
+      var btn = document.getElementsByClassName('club_hover');
+      var art = document.getElementsByClassName('club_overview');
+      Array.from(art).forEach(function(element){
+      element.style.display = 'none';
+      })
+      $(btn).click(function(){
+      var index = $(this).index();
+      console.log(index);
+      $("#default").css("display","none");
+      Array.from(art).forEach(function(element){
+      element.style.display = 'none';
+      })
+      art[index].style.display="block";
+      })
+      });
+    style.
+      .club_hover:hover{
+      background-color: rgba(243,243,243,0.5);
+      color:rgb(15,29,66);
+      }
+      #supporting_club_head{
+      margin-top:30px;
+      padding:50px 0;
+      background-color: rgba(179,18,27,0.4);
+      color:white;
+      }
+      #supporting_club_head:hover{
+      background-color: rgba(243,243,243,0.5);
+      color:  rgb(179,18,27);
+      outline:2px solid rgb(179,18,27);
+      outline-offset: -25px;
+      }
+      #default{
+      display: block;
+      }
+      .mid{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      .box{
+      height:100vh;
+      padding-top:70px;
+      }
+      .navbar{
+      background-color: rgba(243,243,243,.5);
+      }
+      @media only screen and (max-width:450px) {
+      .navbar{
+      background-color: rgba(243,243,243,1);
+      }
+      .box{
+      height: 100%;
+      }
+      }
+  body
+    .se-pre-con
+    // Page Content
+    .container-fluid
+      .row
+        include partials/navbar.jade
+
+      .row(style='')
+        .col-md-6.box(style="background-image:url('images/club1.jpg');")
+          #supporting_club_head.row
+            h1(style='text-align:center;  font-size:60px; ') SUPPORTING
+            h1(style='text-align:center;  font-size:100px; ') ☆ CLUBS ☆
+          .row
+            div(style='padding:50px 0')
+              .club_hover
+                h2(style='text-align:center; ') CLUB 1
+              .club_hover
+                h2(style='text-align:center; ') CLUB 2
+              .club_hover
+                h2(style='text-align:center; ') CLUB 3
+              .club_hover
+                h2(style='text-align:center; ') CLUB 4
+        .col-md-6.box(style="background-image:url('images/b2.jpg'); ")
+          #default.row.mid(style='height:100%;')
+            div(style='width:80%; margin:0 auto; overflow:hidden; position:relative; height:60vh; top: 15vh;')
+              img(width='100%', src='images/sample.jpg')
+          .row.club_overview.mid(style='height:100%;')
+            div(style='width:80%; margin:0 auto; overflow:hidden; position:relative; height:60vh; top:15vh;')
+              img(width='100%', src='images/sample.jpg')
+          .row.club_overview.mid(style='height:100%;')
+            div(style='width:80%; margin:0 auto; overflow:hidden; position:relative; height:60vh; top:15vh;')
+              img(width='100%', src='images/sample.jpg')
+          .row.club_overview.mid(style='height:100%;')
+            div(style='width:80%; margin:0 auto; overflow:hidden; position:relative; height:60vh; top:15vh;')
+              img(width='100%', src='images/sample.jpg')
+          .row.club_overview.mid(style='height:100%;')
+            div(style='width:80%; margin:0 auto; overflow:hidden; position:relative; height:60vh; top:15vh;')
+              img(width='100%', src='images/sample.jpg')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js')
+    script(src='javascripts/Bootsrap/jquery.min.js')
+    script(src='javascripts/Bootsrap/js/bootstrap.min.js')
+    // Bootstrap & jQuery
+    script(src='javascripts/js/production.min.js')

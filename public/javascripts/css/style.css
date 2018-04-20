@@ -1,0 +1,80 @@
+
+#team .block {
+  position: relative;
+  overflow: hidden;
+  
+  -webkit-transition: .4s all;
+  -o-transition: .4s all;
+  transition: .4s all;
+}
+#team .block img {
+  width:100%;
+  height:450px;
+  position: relative;
+}
+
+#team .block:hover {
+  border: 3px solid #80d6a3;
+
+}
+#team .block:hover .team-overlay {
+  bottom: 0;
+  opacity: 1;
+}
+#team .team-overlay {
+  background: rgba(255, 255, 255, 0.95);
+  color: #fff;
+  text-align: center;
+  padding: 48px 62px;
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  
+  transition: 0.3s;
+}
+#team .team-overlay h3,
+#team .team-overlay span {
+  color: #333;
+}
+#team .team-overlay span {
+  display: block;
+  font-size: 13px;
+  padding-top: 10px;
+}
+#team .team-overlay .icon {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: 1;
+  margin-top: 36px;
+  margin-bottom: 25px;
+  border-radius: 100%;
+  display: inline-block;
+  background: #80d6a3;
+}
+#team .team-overlay .icon i {
+  font-size: 18px;
+  color: #fff;
+}
+#team .team-overlay p {
+  font-size: 14px;
+  line-height: 23px;
+  color: #707a8a;
+  
+}
+#team .team-overlay .media {
+  margin-top: 10px;
+}
+#team .team-overlay .media a {
+  font-size: 12px;
+  color: #fff;
+  transition: 0.3s;
+  margin: 0 10px;
+}
+#team .team-overlay .media a:hover {
+  color: #80d6a3;
+}
